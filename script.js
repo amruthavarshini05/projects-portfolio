@@ -1,21 +1,19 @@
-// Project filters + small page details.
-const filterButtons = document.querySelectorAll(".filter-button");
-const projectCards = document.querySelectorAll(".project-card");
-const countElement = document.getElementById("project-count");
+// Two jobs: filter projects by category, and fill in the year.
+const buttons = document.querySelectorAll(".filter");
+const projects = document.querySelectorAll(".project");
+const count = document.getElementById("project-count");
 
 function updateCount() {
-  const visibleCount = [...projectCards].filter(card => !card.classList.contains("is-hidden")).length;
-  if (countElement) countElement.textContent = String(visibleCount).padStart(2, "0");
+  // Count only cards that are not hidden, so the number always matches what you see.
+  count.textContent = [...projects].filter(p => !p.hidden).length;
 }
 
-filterButtons.forEach(button => {
-  button.addEventListener("click", () => {
-    const filter = button.dataset.filter;
-    filterButtons.forEach(item => item.classList.toggle("active", item === button));
-    projectCards.forEach(card => {
-      const shouldShow = filter === "all" || card.dataset.category === filter;
-      card.classList.toggle("is-hidden", !shouldShow);
-    });
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const f = btn.dataset.filter;
+    buttons.forEach(b => b.classList.toggle("active", b === btn));
+    // `hidden` is the native HTML attribute: it also removes the card from screen readers.
+    projects.forEach(p => { p.hidden = !(f === "all" || p.dataset.category === f); });
     updateCount();
   });
 });
