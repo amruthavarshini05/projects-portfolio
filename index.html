@@ -7,37 +7,40 @@
 <title>Amrutha Varshini Sundaram | Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=Newsreader:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=Newsreader:ital,wght@0,500;0,700;1,400&family=Caveat:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header class="top">
-  <div class="top-in">
-    <!-- Put your photo in this folder as photo.jpg. If missing, initials show instead. -->
-    <div class="avatar" data-initials="AV"><img src="photo.jpg" alt="Amrutha Varshini Sundaram" onerror="this.remove()"></div>
-    <div>
-      <h1>Amrutha Varshini Sundaram</h1>
-      <p class="role">Computer Science student · Nice, France</p>
-      <nav class="links" aria-label="Contact links">
-        <a href="mailto:amrutha.rsm@gmail.com">amrutha.rsm@gmail.com</a>
-        <a href="https://github.com/amruthavarshini05" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/amrutha-varshini-sundaram-934852281" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a href="cv.pdf" target="_blank" rel="noreferrer">CV (PDF)</a>
-      </nav>
-    </div>
-  </div>
-
-  <!--
-    TABS: to add one, (1) copy a <button class="tab"> below, set data-tab="newid" and its label,
-    (2) copy a <section class="panel"> further down and give it id="newid". No CSS or JS changes needed.
-  -->
-  <div class="tabs" role="tablist" aria-label="Portfolio sections">
-    <button class="tab" role="tab" data-tab="profile">Profile</button>
-    <button class="tab" role="tab" data-tab="projects">Tech projects</button>
-    <button class="tab" role="tab" data-tab="leadership">Leadership</button>
+<header class="hero">
+  <span class="star s1" aria-hidden="true">★</span><span class="star s2" aria-hidden="true">★</span>
+  <!-- Put your photo in this folder as photo.jpg. If missing, initials show instead. -->
+  <figure class="polaroid">
+    <div class="pic" data-initials="AV"><img src="photo.jpg" alt="Amrutha Varshini Sundaram" onerror="this.remove()"></div>
+    <figcaption class="cap">me, in Nice ✿</figcaption>
+  </figure>
+  <div class="hero-text">
+    <p class="hand">hi! welcome to my scrapbook</p>
+    <h1><span>Amrutha</span> <span>Varshini</span> <span>Sundaram</span></h1>
+    <p class="role">Computer Science student · Nice, France</p>
+    <nav class="links" aria-label="Contact links">
+      <a href="mailto:amrutha.rsm@gmail.com">Email</a>
+      <a href="https://github.com/amruthavarshini05" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/amrutha-varshini-sundaram-934852281" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="cv.pdf" target="_blank" rel="noreferrer">CV (PDF)</a>
+    </nav>
   </div>
 </header>
+
+<!--
+  TABS: to add one, (1) copy a <button class="tab"> below, set data-tab="newid" and its label,
+  (2) copy a <section class="panel"> further down and give it id="newid". No CSS or JS changes needed.
+-->
+<div class="tabs" role="tablist" aria-label="Portfolio sections">
+  <button class="tab" role="tab" data-tab="profile">Profile</button>
+  <button class="tab" role="tab" data-tab="projects">Tech projects</button>
+  <button class="tab" role="tab" data-tab="leadership">Leadership</button>
+</div>
 
 <main>
 
@@ -162,7 +165,7 @@
 
 </main>
 
-<footer class="foot">© <span id="year"></span> Amrutha Varshini Sundaram</footer>
+<footer class="foot">© <span id="year"></span> Amrutha Varshini Sundaram · made with lots of tape ✿</footer>
 <script src="script.js"></script>
 </body>
 </html>
