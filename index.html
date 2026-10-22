@@ -1,156 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- EDIT: shows in Google results and when the link is shared -->
-  <meta name="description" content="Amrutha Varshini — computer science student. Projects in data, software and AI." />
-  <title>Amrutha Varshini | Projects</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;700&family=Newsreader:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Amrutha Varshini Sundaram: computer science student in Nice. Full-stack, AI/NLP and product projects, plus leadership work." />
+<title>Amrutha Varshini Sundaram | Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=Newsreader:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="layout">
 
-    <!-- LEFT RAIL: stays visible while the project list scrolls -->
-    <aside class="rail">
-      <h1>Amrutha<br>Varshini</h1>
-      <!-- EDIT: one or two sentences. Say what you study and what you want to do next. -->
-      <p class="intro">Computer science student in Nice, France, building toward AI/ML and cloud engineering. I like turning messy questions into things that work.</p>
-
-      <nav class="rail-links" aria-label="Links">
-        <!-- EDIT: replace each placeholder with your real link -->
-        <a href="https://github.com/YOUR-USERNAME" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/YOUR-LINKEDIN/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <!-- CV: upload cv.pdf to this repo, then use href="cv.pdf" -->
+<header class="top">
+  <div class="top-in">
+    <!-- Put your photo in this folder as photo.jpg. If missing, initials show instead. -->
+    <div class="avatar" data-initials="AV"><img src="photo.jpg" alt="Amrutha Varshini Sundaram" onerror="this.remove()"></div>
+    <div>
+      <h1>Amrutha Varshini Sundaram</h1>
+      <p class="role">Computer Science student · Nice, France</p>
+      <nav class="links" aria-label="Contact links">
+        <a href="mailto:amrutha.rsm@gmail.com">amrutha.rsm@gmail.com</a>
+        <a href="https://github.com/amruthavarshini05" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/amrutha-varshini-sundaram-934852281" target="_blank" rel="noreferrer">LinkedIn</a>
         <a href="cv.pdf" target="_blank" rel="noreferrer">CV (PDF)</a>
-        <a href="mailto:YOUR-EMAIL@example.com">Email</a>
       </nav>
-
-      <p class="rail-foot">
-        <!-- EDIT: your university / programme -->
-        B.Tech CSE, Mahindra University<br>
-        CentraleDigitalLab, Centrale Méditerranée<br>
-        Looking for an internship from April 2027
-      </p>
-    </aside>
-
-    <!-- RIGHT: the project index -->
-    <main class="index">
-      <div class="index-head">
-        <h2>Projects <span id="project-count" class="count">6</span></h2>
-        <!-- Filter buttons. data-filter must match a card's data-category below. -->
-        <div class="filters" role="group" aria-label="Filter projects">
-          <button class="filter active" data-filter="all">All</button>
-          <button class="filter" data-filter="data">Data &amp; ML</button>
-          <button class="filter" data-filter="software">Software</button>
-          <button class="filter" data-filter="research">Research</button>
-        </div>
-      </div>
-
-      <!--
-        HOW TO ADD A PROJECT: copy one whole <details class="project"> ... </details> block
-        and paste it below the last one. Then change:
-          data-category : data | software | research (controls the filter buttons)
-          .year         : year you built it
-          h3            : project title
-          .stack        : tools used, separated by commas
-          .what / .learned : 1–3 sentences each
-          href          : your GitHub repo link
-        Click-to-expand works automatically (it is a native <details> element).
-      -->
-
-      <details class="project" data-category="data" open>
-        <summary>
-          <span class="year">2025</span>
-          <span class="title"><h3>Day-Ahead Electric Load Forecasting</h3><span class="stack">Python, ARIMA/SARIMA, STL</span></span>
-          <span class="plus" aria-hidden="true"></span>
-        </summary>
-        <div class="body">
-          <!-- EDIT: what the project does and the problem it solves -->
-          <p class="what">Forecasts next-day electricity demand with time-series methods. STL decomposition separates trend and seasonality before ARIMA/SARIMA models are fitted.</p>
-          <!-- EDIT: one concrete result, number or lesson. Recruiters read this line. -->
-          <p class="learned"><b>Result / what I learned:</b> Add an error metric (e.g. MAPE) or the main insight here.</p>
-          <a class="repo" href="YOUR-REPO-LINK-1" target="_blank" rel="noreferrer">View repository ↗</a>
-        </div>
-      </details>
-
-      <details class="project" data-category="software">
-        <summary>
-          <span class="year">2025</span>
-          <span class="title"><h3>Peer-to-Peer Tutoring Platform</h3><span class="stack">React, Node.js, MongoDB</span></span>
-          <span class="plus" aria-hidden="true"></span>
-        </summary>
-        <div class="body">
-          <p class="what">A doubt-clarification platform with session booking, chat and personalised learning pathways.</p>
-          <p class="learned"><b>Result / what I learned:</b> Add what you built yourself and one thing that was hard.</p>
-          <a class="repo" href="YOUR-REPO-LINK-2" target="_blank" rel="noreferrer">View repository ↗</a>
-          <!-- OPTIONAL: if you deploy it, add: <a class="repo" href="LIVE-DEMO-URL">Live demo ↗</a> -->
-        </div>
-      </details>
-
-      <details class="project" data-category="research">
-        <summary>
-          <span class="year">2025</span>
-          <span class="title"><h3>Centrality &amp; Herding in Groups</h3><span class="stack">Python, network analysis, social data</span></span>
-          <span class="plus" aria-hidden="true"></span>
-        </summary>
-        <div class="body">
-          <p class="what">Social media trend analysis exploring how network centrality and group dynamics influence the spread of online behaviour.</p>
-          <p class="learned"><b>Result / what I learned:</b> Add your main finding here.</p>
-          <a class="repo" href="YOUR-REPO-LINK-3" target="_blank" rel="noreferrer">View repository ↗</a>
-        </div>
-      </details>
-
-      <details class="project" data-category="data">
-        <summary>
-          <span class="year">2026</span>
-          <span class="title"><h3>GenAI Learning Assistant</h3><span class="stack">Python, NLP, LLMs</span></span>
-          <span class="plus" aria-hidden="true"></span>
-        </summary>
-        <div class="body">
-          <!-- EDIT: starter text. Replace with your GenAI elective project details. -->
-          <p class="what">Replace this with what the assistant does and which problem it solves.</p>
-          <p class="learned"><b>Result / what I learned:</b> Replace with your result.</p>
-          <a class="repo" href="YOUR-REPO-LINK-4" target="_blank" rel="noreferrer">View repository ↗</a>
-        </div>
-      </details>
-
-      <details class="project" data-category="software">
-        <summary>
-          <span class="year">2024</span>
-          <span class="title"><h3>Password Strength Checker</h3><span class="stack">Python, validation</span></span>
-          <span class="plus" aria-hidden="true"></span>
-        </summary>
-        <div class="body">
-          <p class="what">Evaluates password strength and gives specific feedback so users can fix weak passwords.</p>
-          <p class="learned"><b>Result / what I learned:</b> Add the rules you checked and what you'd improve.</p>
-          <a class="repo" href="YOUR-REPO-LINK-5" target="_blank" rel="noreferrer">View repository ↗</a>
-        </div>
-      </details>
-
-      <details class="project" data-category="data">
-        <summary>
-          <span class="year">2026</span>
-          <span class="title"><h3>NLP Project</h3><span class="stack">Python, scikit-learn, NLP</span></span>
-          <span class="plus" aria-hidden="true"></span>
-        </summary>
-        <div class="body">
-          <!-- EDIT: starter text. Name the problem, dataset, approach and result. -->
-          <p class="what">Replace with the NLP problem, dataset and approach.</p>
-          <p class="learned"><b>Result / what I learned:</b> Replace with your result.</p>
-          <a class="repo" href="YOUR-REPO-LINK-6" target="_blank" rel="noreferrer">View repository ↗</a>
-        </div>
-      </details>
-
-      <!-- EDIT: delete this paragraph once every placeholder above is replaced -->
-      <p class="todo">Placeholders (YOUR-…) and starter text still need replacing before you share the link.</p>
-
-      <footer class="foot">© <span id="year"></span> Amrutha Varshini</footer>
-    </main>
+    </div>
   </div>
-  <script src="script.js"></script>
+
+  <!--
+    TABS: to add one, (1) copy a <button class="tab"> below, set data-tab="newid" and its label,
+    (2) copy a <section class="panel"> further down and give it id="newid". No CSS or JS changes needed.
+  -->
+  <div class="tabs" role="tablist" aria-label="Portfolio sections">
+    <button class="tab" role="tab" data-tab="profile">Profile</button>
+    <button class="tab" role="tab" data-tab="projects">Tech projects</button>
+    <button class="tab" role="tab" data-tab="leadership">Leadership</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ================= PROFILE ================= -->
+<section class="panel" id="profile" role="tabpanel">
+  <h2 class="band">Profile</h2>
+  <p class="lead">Computer Science student at Mahindra University (India), studying abroad at Centrale Méditerranée in Nice. I'm drawn to the full product life cycle, from user need to launch, with hands-on experience building full-stack applications and evaluating AI systems (NLP, RAG), plus founder experience running a small venture end to end.</p>
+  <p class="seek"><b>Looking for:</b> a 5-month internship (stage) from April 2027 in product management or AI/technical product, and open to software engineering. French student visa holder; convention de stage provided by Centrale Méditerranée.</p>
+
+  <h2 class="band">Education</h2>
+  <div class="row"><span class="date">Sep 2026 – Aug 2027</span><div><h3>CentraleDigitalLab Program</h3><p class="meta">Centrale Méditerranée, Nice, France</p><p>Intensive foundation courses and industry projects.</p></div></div>
+  <div class="row"><span class="date">Aug 2023 – Aug 2027</span><div><h3>B.Tech. Computer Science and Engineering</h3><p class="meta">Mahindra University, Hyderabad, India</p><p>CGPA 9.29/10 (until 3rd year) · 2x Academic Scholarship · Final year: Study Abroad Program</p></div></div>
+  <div class="row"><span class="date">Apr 2019 – Mar 2023</span><div><h3>AS and A Levels, IGCSE</h3><p class="meta">Reqelford International School, Hyderabad, India</p><p>A Levels 87.25% · AS 80% · IGCSE 93.14%</p></div></div>
+
+  <h2 class="band">Technical skills</h2>
+  <dl class="skills">
+    <dt>Programming</dt><dd>Python, Java, C</dd>
+    <dt>AI / ML</dt><dd>PyTorch, Scikit-learn, Hugging Face, NLP, RAG, LLM APIs, Time-series forecasting</dd>
+    <dt>Web</dt><dd>React, Node.js, Express.js, FastAPI, HTML/CSS, JavaScript</dd>
+    <dt>Databases</dt><dd>MySQL, MongoDB, Supabase (PostgreSQL)</dd>
+    <dt>Tools</dt><dd>Git/GitHub, JIRA, Agile/Scrum, Notion, VS Code, Gephi, Adobe Illustrator</dd>
+  </dl>
+
+  <h2 class="band">Coursework</h2>
+  <p class="chips"><span>GenAI and LLMs</span><span>Deep Neural Networks</span><span>Machine Learning</span><span>Artificial Intelligence</span><span>Applied Time Series Analysis</span><span>Modern Cryptography</span><span>Software Engineering</span><span>Data Structures and Algorithms</span><span>Design and Analysis of Algorithms</span><span>Operating Systems</span><span>DBMS</span><span>OOPS</span></p>
+
+  <h2 class="band">Languages &amp; interests</h2>
+  <dl class="skills">
+    <dt>Languages</dt><dd>English (C1–C2), Hindi (C1), Tamil and Telugu (fluent, spoken), French (A2/B1, improving)</dd>
+    <dt>Interests</dt><dd>Reading, crochet, singing, travel</dd>
+  </dl>
+</section>
+
+<!-- ================= TECH PROJECTS ================= -->
+<!-- To add a project: copy one <article class="row"> block and edit it. Newest goes on top. -->
+<section class="panel" id="projects" role="tabpanel" hidden>
+  <h2 class="band">Tech projects</h2>
+
+  <article class="row"><span class="date">Oct 2026 – Present</span><div>
+    <h3>Space-Mission Knowledge Search Assistant</h3>
+    <p class="meta">Industry project with LAM (Laboratoire d'Astrophysique de Marseille)</p>
+    <p class="chips"><span>Python</span><span>NLP</span><span>RAG</span><span>Qdrant</span></p>
+    <p>Building a RAG assistant that lets LAM engineers and researchers search mission knowledge across web pages, an issue tracker and data servers. It gives source-cited answers, abstains when evidence is missing, and respects document access levels.</p>
+  </div></article>
+
+  <article class="row"><span class="date">Jun – Jul 2026</span><div>
+    <h3>Tandem</h3>
+    <p class="meta">Independent project</p>
+    <p class="chips"><span>React Native (Expo)</span><span>TypeScript</span><span>Supabase</span></p>
+    <p>Designed the product and built it with AI-assisted coding: a cross-platform iOS and Android app (Expo Router, Supabase) where groups track movies together, with over-the-air updates via EAS.</p>
+    <a class="repo" href="https://github.com/amruthavarshini05/REPO-NAME" target="_blank" rel="noreferrer">View repository</a>
+  </div></article>
+
+  <article class="row"><span class="date">Apr – May 2026</span><div>
+    <h3>Can Fine-Tuning on Bias Introduce Bias?</h3>
+    <p class="meta">Coursework group research project</p>
+    <p class="chips"><span>Python</span><span>PyTorch</span><span>LoRA</span><span>Sentence-Transformers</span></p>
+    <p>Studied whether fine-tuning MiniLM with LoRA on StereoSet changes the model's own representational bias, probing it on CrowS-Pairs and SST-2.</p>
+    <p class="result"><b>Result:</b> the model over-corrected, changing its answers on about 40% of 1,508 test pairs, while sentiment accuracy stayed at 80.8%.</p>
+    <a class="repo" href="https://github.com/amruthavarshini05/REPO-NAME" target="_blank" rel="noreferrer">View repository</a>
+  </div></article>
+
+  <article class="row"><span class="date">Apr – May 2026</span><div>
+    <h3>Logistics Delivery Service</h3>
+    <p class="chips"><span>MongoDB</span><span>Express.js</span><span>React</span><span>Node.js</span></p>
+    <p>Developed a full-stack MERN platform for parcel booking and live shipment tracking, with driver sign-up and management. Use-case tested.</p>
+    <a class="repo" href="https://github.com/amruthavarshini05/REPO-NAME" target="_blank" rel="noreferrer">View repository</a>
+  </div></article>
+
+  <article class="row"><span class="date">Jan – May 2026</span><div>
+    <h3>Peer-to-Peer Tutoring Platform</h3>
+    <p class="chips"><span>React.js</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>FastAPI</span><span>Scikit-learn</span><span>PyTorch</span><span>Agile/Scrum</span></p>
+    <p>Full-stack tutoring platform with session scheduling, live group mentoring and real-time doubt clarification. I built the React and Node/Express layers on MongoDB, plus an ML-based learning-pathway recommender.</p>
+    <a class="repo" href="https://github.com/amruthavarshini05/REPO-NAME" target="_blank" rel="noreferrer">View repository</a>
+  </div></article>
+
+  <article class="row"><span class="date">Nov – Dec 2025</span><div>
+    <h3>Day-Ahead Energy Load Forecasting</h3>
+    <p class="chips"><span>Python</span><span>SARIMA</span><span>STL decomposition</span><span>Machine learning</span></p>
+    <p>Built a SARIMA-based day-ahead load forecasting system on Open Power System Data (STL, ACF/PACF; evaluated with MASE, RMSE, MAPE), with residual z-score and ML anomaly detection, simulated live ingestion and a monitoring dashboard.</p>
+    <a class="repo" href="https://github.com/amruthavarshini05/REPO-NAME" target="_blank" rel="noreferrer">View repository</a>
+  </div></article>
+
+  <article class="row"><span class="date">Oct – Dec 2025</span><div>
+    <h3>Centrality and Herding in Groups</h3>
+    <p class="meta">Group research project</p>
+    <p class="chips"><span>Python</span><span>Excel</span><span>Gephi</span></p>
+    <p>Team study of group decision-making in societal debates, extended to how herding drives marketing, from social media hype waves to movie promotions and celebrity endorsements.</p>
+    <a class="repo" href="https://github.com/amruthavarshini05/REPO-NAME" target="_blank" rel="noreferrer">View repository</a>
+  </div></article>
+</section>
+
+<!-- ================= LEADERSHIP ================= -->
+<section class="panel" id="leadership" role="tabpanel" hidden>
+  <h2 class="band">Leadership &amp; initiative</h2>
+
+  <article class="row"><span class="date">Jul – Dec 2025</span><div>
+    <h3>Programming Head, ROOTS Fest</h3>
+    <p class="meta">Mahindra University · funded by Mahindra and Mahindra</p>
+    <p>Planned and executed the ROOTS cultural festival with industry experts, shaping a new initiative that helps students reconnect with the art forms of their roots.</p>
+  </div></article>
+
+  <article class="row"><span class="date">Mar – May 2025</span><div>
+    <h3>Logistics Head, Étincelle</h3>
+    <p class="meta">La Fête de la Francophonie · Mahindra University</p>
+    <p>Organised the French-language event end to end: assembled and led the volunteer team, ran planning meetings and coordinated mentors and student participants.</p>
+  </div></article>
+
+  <article class="row"><span class="date">Sep 2024 – May 2025</span><div>
+    <h3>Vice-Marketing Head, Hult Prize MU</h3>
+    <p class="meta">Mahindra University</p>
+    <p>Planned events with the Organising Committee, led promotional content to grow participation, and selected the teams that advanced to Hult Prize Global.</p>
+  </div></article>
+
+  <article class="row"><span class="date">Jan – Apr 2024</span><div>
+    <h3>Founder, AURA Handicrafts</h3>
+    <p class="meta">Handmade-products venture · Mahindra University</p>
+    <p>Launched and ran a handmade-products venture, owning production, pricing and sales strategy.</p>
+    <p class="result"><b>Result:</b> turned INR 5,000 of starting capital into INR 25,000 in sales (INR 20,000 profit), online and at stalls.</p>
+  </div></article>
+</section>
+
+</main>
+
+<footer class="foot">© <span id="year"></span> Amrutha Varshini Sundaram</footer>
+<script src="script.js"></script>
 </body>
 </html>
