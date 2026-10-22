@@ -89,3 +89,10 @@ main { max-width:900px; margin:0 auto; padding:.5rem 1.5rem 2rem; }
   .skills { grid-template-columns:1fr; gap:0; } .skills dd { margin-bottom:.6rem; }
 }
 @media (prefers-reduced-motion:reduce) { * { transition:none !important; animation:none !important; scroll-behavior:auto !important; } }
+
+.snap { float:right; width:170px; margin:.2rem 0 .8rem 1.2rem; padding:.5rem .5rem 0; background:#fff; box-shadow:var(--lift); rotate:3deg; }
+.snap img { display:block; width:100%; aspect-ratio:4/3; object-fit:cover; }
+.snap figcaption { font:600 1.1rem/1 var(--hand); color:var(--navy); text-align:center; padding:.4rem 0 .5rem; }
+.row:nth-child(even) .snap { rotate:-3deg; }
+.row::after { content:""; display:block; clear:both; }
+@media (max-width:640px) { .snap { float:none; margin:.8rem auto; } }
